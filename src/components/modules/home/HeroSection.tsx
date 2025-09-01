@@ -1,13 +1,33 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
-import { motion } from "motion/react";
-import React from "react";
+import { ArrowRight, Download } from "lucide-react";
+import { AnimatePresence, motion } from "motion/react";
+import React, { useEffect, useState } from "react";
 import profile from "@/assets/images/Profile.png";
 import { Link } from "react-router";
 
 type Props = {};
 
+const texts = [
+  "Full-Stack Web Developer",
+  "Frontend Developer",
+  "Backend Developer",
+  "Web Developer",
+];
+
 const HeroSection: React.FC<Props> = () => {
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    const len = texts[index].length;
+    // total time = letters animating in + visible pause + letters animating out
+    const switchDelay = len * 100 + 1000 + len * 100; // ms
+    const interval = setInterval(() => {
+      setIndex((prev) => (prev + 1) % texts.length);
+    }, switchDelay);
+
+    return () => clearInterval(interval);
+  }, [index]);
+
   return (
     <section>
       <div className="container">
@@ -20,32 +40,54 @@ const HeroSection: React.FC<Props> = () => {
             viewport={{ once: true, amount: 0.3 }}
             className="flex flex-col items-center text-center order-2 md:order-1 lg:items-start lg:text-left"
           >
-            <h1 className="my-6 text-pretty text-4xl font-bold lg:text-6xl">
+            <h1 className="my-6 text-pretty text-4xl font-semibold leading-16">
               Hello! <br /> I&apos;m <br />{" "}
-              <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent italic">
+              <span className="text-5xl lg:text-7xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent italic">
                 Md. Ranit Rubbyat
               </span>
             </h1>
-            <p className="text-muted-foreground mb-8 max-w-xl lg:text-xl">
-              Full-Stack Web Developer
-            </p>
-            <p className="text-muted-foreground mb-8 max-w-xl">
+            <div className="text-muted-foreground mb-8 max-w-xl text-xl lg:text-2xl flex flex-wrap">
+              <AnimatePresence mode="wait">
+                <motion.p key={texts[index]} className="flex flex-wrap">
+                  {texts[index].split("").map((char, idx) => (
+                    <motion.span
+                      key={idx}
+                      initial={{ opacity: 0, y: -20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: 20 }} // fade + slide OUT
+                      transition={{
+                        duration: 0.1,
+                        delay: idx * 0.1,
+                      }}
+                    >
+                      {char === " " ? "\u00A0" : char}{" "}
+                    </motion.span>
+                  ))}
+                </motion.p>
+              </AnimatePresence>
+            </div>
+            <p className="text-muted-foreground mb-8 max-w-xl lg:xl">
               I craft scalable web apps with clean code, sharp design, and
               reusable components.
             </p>
             <div className="flex w-full flex-col justify-center gap-2 sm:flex-row lg:justify-start">
-              <Button asChild className="w-full sm:w-auto">
+              <Button asChild size={"lg"} className="w-full sm:w-auto">
                 <a
                   href={
                     "https://drive.google.com/file/d/1iM5Fsn3HA0o_P9GFNvRFpEsLaKdQcQJU/view?usp=sharing"
                   }
                   target="_blank"
                 >
-                  Resume
+                  <Download /> Resume
                 </a>
               </Button>
 
-              <Button asChild variant="outline" className="w-full sm:w-auto">
+              <Button
+                asChild
+                size={"lg"}
+                variant="outline"
+                className="w-full sm:w-auto"
+              >
                 <Link to={"/blogs"}>
                   Blog
                   <ArrowRight className="size-4" />
