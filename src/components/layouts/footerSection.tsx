@@ -23,7 +23,7 @@ const Footer: React.FC = () => {
           className="text-muted-foreground hover:text-primary transition-colors"
         >
           <img
-            src="https://img.icons8.com/material-rounded/48/github.png"
+            src="https://img.icons8.com/fluency/48/github.png"
             alt="github"
           />
         </a>
