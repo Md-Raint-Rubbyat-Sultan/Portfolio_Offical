@@ -1,17 +1,7 @@
-import React, { useEffect, useState } from "react";
-import { useParams, Link, useLoaderData } from "react-router";
-import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-
-type Blog = {
-  _id: string;
-  title: string;
-  shortDescription: string;
-  content: string;
-  date: string;
-  author: string;
-  image: string;
-};
+import { motion } from "framer-motion";
+import React from "react";
+import { Link, useLoaderData } from "react-router";
 
 const BlogDetails: React.FC = () => {
   const { blogs: blog } = useLoaderData();
