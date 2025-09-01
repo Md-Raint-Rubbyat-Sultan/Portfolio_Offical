@@ -1,0 +1,29 @@
+[
+  {
+    "_id": "react-19",
+    "title": "React 19: What's New in the Latest Release",
+    "shortDescription": "React 19 introduces improved server components, automatic batching, and better developer tools. Let’s explore the highlights!",
+    "content": "React 19 brings major improvements to both performance and DX (developer experience). Some key features include: 1) Automatic Batching – multiple state updates are batched by default, reducing unnecessary renders. 2) Server Components – making it easier to deliver lightweight applications with better rendering strategies. 3) Enhanced DevTools – debugging and profiling improvements. These updates make React applications faster, leaner, and easier to maintain.",
+    "date": "2025-07-15",
+    "author": "Md Ranit Rubbyat Sultan",
+    "image": "https://img.icons8.com/color/96/react-native.png"
+  },
+  {
+    "_id": "react-router-v7",
+    "title": "React Router v7: Smarter Data APIs & Suspense Support",
+    "shortDescription": "React Router v7 comes with a brand new data API, better suspense integration, and route-level error handling.",
+    "content": "React Router v7 focuses on data loading and error boundaries. Some highlights: 1) Data APIs – now you can use `loader` and `action` functions with full TypeScript support. 2) Suspense for Data – async route loading works seamlessly with React Suspense. 3) Error Elements – fine-grained control over error UI at different route levels. This makes routing more robust and aligned with React 19 features.",
+    "date": "2025-08-01",
+    "author": "Md Ranit Rubbyat Sultan",
+    "image": "https://img.icons8.com/color/96/react-native.png"
+  },
+  {
+    "_id": "mongodb-8",
+    "title": "MongoDB 8.0: Performance, Query Enhancements, and AI Integrations",
+    "shortDescription": "MongoDB 8.0 introduces vector search, enhanced sharding, and native AI model integration.",
+    "content": "MongoDB 8.0 is a big leap forward for modern applications. Key updates: 1) Vector Search – enabling semantic and AI-powered search directly inside MongoDB. 2) Enhanced Sharding – improved scalability for large-scale applications. 3) Time Series Enhancements – better handling of real-time IoT and analytics data. 4) AI Integration – built-in connectors for popular AI frameworks. These features allow developers to build smarter, more scalable apps without relying on external tools.",
+    "date": "2025-08-20",
+    "author": "Md Ranit Rubbyat Sultan",
+    "image": "https://img.icons8.com/color/96/mongodb.png"
+  }
+]

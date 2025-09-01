@@ -1,0 +1,69 @@
+[
+  {
+    "_id": "rimi",
+    "title": "Rimi – Ride Sharing App",
+    "description": "A modern ride-sharing app built with React, TypeScript, Redux Toolkit, and RTK Query.",
+    "image": [
+      "https://i.ibb.co.com/KjJ7gKG5/Screenshot-2025-08-30-120802.png",
+      "https://i.ibb.co.com/9m9hn8Fj/Screenshot-2025-08-30-120851.png",
+      "https://i.ibb.co.com/r2LCgG4V/Screenshot-2025-08-30-121243.png",
+      "https://i.ibb.co.com/7tBtXSsw/Screenshot-2025-08-30-121023.png"
+    ],
+    "github": {
+      "client": "https://github.com/Md-Raint-Rubbyat-Sultan/Rimi_Ride_Booking_Assignmetn_6",
+      "backend": "https://github.com/Md-Raint-Rubbyat-Sultan/Ride_Share_Backend_Assignment_5"
+    },
+    "liveDemo": "https://rimi-sand.vercel.app",
+    "details": "Rimi allows users to book rides, manage profiles, and view history. Includes an admin dashboard with analytics and role management.",
+    "tech": {
+      "frontend": [
+        {
+          "name": "React",
+          "logo": "https://img.icons8.com/color/48/react-native.png"
+        },
+        {
+          "name": "Redux",
+          "logo": "https://img.icons8.com/color/48/redux.png"
+        },
+        {
+          "name": "TypeScript",
+          "logo": "https://img.icons8.com/color/48/typescript.png"
+        },
+        {
+          "name": "Tailwind CSS",
+          "logo": "https://img.icons8.com/color/48/tailwind_css.png"
+        }
+      ],
+      "backend": [
+        {
+          "name": "Node.js",
+          "logo": "https://img.icons8.com/color/48/nodejs.png"
+        },
+        {
+          "name": "Express",
+          "logo": "https://img.icons8.com/ios/50/express-js.png"
+        }
+      ],
+      "DataBase": [
+        {
+          "name": "MongoDB",
+          "logo": "https://img.icons8.com/external-tal-revivo-color-tal-revivo/48/external-mongodb-a-cross-platform-document-oriented-database-program-logo-color-tal-revivo.png"
+        },
+        {
+          "name": "Mongoose",
+          "logo": "https://img.icons8.com/color/48/mongoose.png"
+        }
+      ],
+      "Auth": [
+        {
+          "name": "Passport",
+          "logo": "https://img.icons8.com/doodle/48/passport--v2.png"
+        },
+        {
+          "name": "JWT",
+          "logo": "https://img.icons8.com/color/48/java-web-token.png"
+        }
+      ]
+    }
+  }
+]
