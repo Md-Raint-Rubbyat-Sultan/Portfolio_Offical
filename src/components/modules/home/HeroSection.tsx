@@ -101,12 +101,8 @@ const HeroSection: React.FC<Props> = () => {
             transition={{ delay: 0.6, ease: "easeIn" }}
             whileInView="visible"
             viewport={{ amount: 0.3 }}
-            className="relative flex justify-center overflow-hidden rounded-full order-1 md:order-2  w-60 h-60 sm:w-64 sm:h-64 md:w-72 md:h-72 lg:w-80 lg:h-80 mx-auto"
+            className="relative flex justify-center overflow-hidden rounded-full order-1 md:order-2 bg-accent shadow shadow-muted w-60 h-60 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 mx-auto"
           >
-            <div
-              className="bg-secondary rounded-full absolute bottom-0 
-                  w-4/5 h-4/5"
-            ></div>
             <img
               src={profile}
               alt="Profile image"

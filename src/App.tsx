@@ -7,6 +7,7 @@ import SkillsSection from "./components/modules/home/SkillsSection";
 import ContactMe from "./components/modules/home/ContactMe";
 import Projects from "./components/modules/home/Projects";
 import Footer from "./components/layouts/footerSection";
+import EducationSection from "./components/modules/home/EducationSection";
 
 type Props = {};
 
@@ -58,6 +59,16 @@ const App: React.FC<Props> = () => {
           viewport={{ once: true, amount: 0.15 }}
         >
           <Projects />
+        </motion.div>
+
+        {/* Education */}
+        <motion.div
+          variants={fadeInUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.15 }}
+        >
+          <EducationSection />
         </motion.div>
 
         {/* Contact */}

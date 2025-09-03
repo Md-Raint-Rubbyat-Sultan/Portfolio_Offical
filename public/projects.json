@@ -65,5 +65,93 @@
         }
       ]
     }
+  },
+  {
+    "_id": "nano_library",
+    "title": "Nano Library",
+    "description": "A modern library management app built with React, TypeScript, Redux Toolkit, and RTK Query.",
+    "image": [
+      "https://i.ibb.co.com/9H5QdFJ8/Screenshot-2025-07-22-131520.png",
+      "https://i.ibb.co.com/LXc0CtzK/Screenshot-2025-07-22-131543.png",
+      "https://i.ibb.co.com/rJYgqvk/Screenshot-2025-07-22-131459.png"
+    ],
+    "github": {
+      "client": "https://github.com/Md-Raint-Rubbyat-Sultan/Nano_Library_Assignment_4",
+      "backend": "https://librarymanagementassigment.vercel.app/api/books"
+    },
+    "liveDemo": "nano-library.vercel.app",
+    "details": "Nano_Library allows users to manage books and borrowing records efficiently through a sleek and user-friendly UI.",
+    "tech": {
+      "frontend": [
+        {
+          "name": "React",
+          "logo": "https://img.icons8.com/color/48/react-native.png"
+        },
+        {
+          "name": "Redux",
+          "logo": "https://img.icons8.com/color/48/redux.png"
+        },
+        {
+          "name": "TypeScript",
+          "logo": "https://img.icons8.com/color/48/typescript.png"
+        },
+        {
+          "name": "Tailwind CSS",
+          "logo": "https://img.icons8.com/color/48/tailwind_css.png"
+        }
+      ],
+      "backend": [
+        {
+          "name": "Node.js",
+          "logo": "https://img.icons8.com/color/48/nodejs.png"
+        },
+        {
+          "name": "Express",
+          "logo": "https://img.icons8.com/ios/50/express-js.png"
+        }
+      ],
+      "DataBase": [
+        {
+          "name": "MongoDB",
+          "logo": "https://img.icons8.com/external-tal-revivo-color-tal-revivo/48/external-mongodb-a-cross-platform-document-oriented-database-program-logo-color-tal-revivo.png"
+        },
+        {
+          "name": "Mongoose",
+          "logo": "https://img.icons8.com/color/48/mongoose.png"
+        }
+      ]
+    }
+  },
+  {
+    "_id": "portfolio",
+    "title": "Portfolio",
+    "description": "A modern Portfolio app built with React, Tailwind CSS, Shadcn Ui, Framer-Motion.",
+    "image": [
+      "https://i.ibb.co.com/dyRDD8G/Screenshot-2025-09-03-203822.png",
+      "https://i.ibb.co.com/q37HjgQ0/Screenshot-2025-09-03-203839.png",
+      "https://i.ibb.co.com/GwDMc0d/Screenshot-2025-09-03-203852.png",
+      "https://i.ibb.co.com/twQ7mzj0/Screenshot-2025-09-03-203910.png"
+    ],
+    "github": {
+      "client": "https://github.com/Md-Raint-Rubbyat-Sultan/Nano_Library_Assignment_4"
+    },
+    "liveDemo": "https://portfolio-livid-chi-73racabqjo.vercel.app",
+    "details": "I'm a MERN stack web developer passionate about building scalable, maintainable, and high-performance web applications. I love solving complex technical problems and continuously exploring new technologies.",
+    "tech": {
+      "frontend": [
+        {
+          "name": "React",
+          "logo": "https://img.icons8.com/color/48/react-native.png"
+        },
+        {
+          "name": "TypeScript",
+          "logo": "https://img.icons8.com/color/48/typescript.png"
+        },
+        {
+          "name": "Tailwind CSS",
+          "logo": "https://img.icons8.com/color/48/tailwind_css.png"
+        }
+      ]
+    }
   }
 ]

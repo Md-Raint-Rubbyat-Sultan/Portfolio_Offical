@@ -70,59 +70,65 @@ const ProjectDetails: React.FC<Props> = () => {
       >
         <Card className="shadow-md border border-border/20 bg-card/5 backdrop-blur-md">
           <CardContent className="flex flex-wrap gap-4 justify-center p-6">
-            <Button
-              asChild
-              variant="default"
-              className="flex items-center gap-2"
-            >
-              <a
-                href={project.liveDemo}
-                target="_blank"
-                rel="noopener noreferrer"
+            {project?.liveDemo && (
+              <Button
+                asChild
+                variant="default"
+                className="flex items-center gap-2"
               >
-                <img
-                  src="https://img.icons8.com/ios/50/globe--v1.png"
-                  alt="live link"
-                />{" "}
-                Live Demo
-              </a>
-            </Button>
+                <a
+                  href={project.liveDemo}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    src="https://img.icons8.com/ios/50/globe--v1.png"
+                    alt="live link"
+                  />{" "}
+                  Live Demo
+                </a>
+              </Button>
+            )}
 
-            <Button
-              asChild
-              variant="outline"
-              className="flex items-center gap-2"
-            >
-              <a
-                href={project.github.client}
-                target="_blank"
-                rel="noopener noreferrer"
+            {project?.github?.client && (
+              <Button
+                asChild
+                variant="outline"
+                className="flex items-center gap-2"
               >
-                <img
-                  src="https://img.icons8.com/fluency/48/github.png"
-                  alt="github client"
-                />{" "}
-                Client
-              </a>
-            </Button>
+                <a
+                  href={project.github.client}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    src="https://img.icons8.com/fluency/48/github.png"
+                    alt="github client"
+                  />{" "}
+                  Client
+                </a>
+              </Button>
+            )}
 
-            <Button
-              asChild
-              variant="outline"
-              className="flex items-center gap-2"
-            >
-              <a
-                href={project.github.backend}
-                target="_blank"
-                rel="noopener noreferrer"
+            {project?.github?.backend && (
+              <Button
+                asChild
+                variant="outline"
+                className="flex items-center gap-2"
               >
-                <img
-                  src="https://img.icons8.com/fluency/48/github.png"
-                  alt="github backend"
-                />{" "}
-                Backend
-              </a>
-            </Button>
+                <a
+                  href={project.github.backend}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    src="https://img.icons8.com/fluency/48/github.png"
+                    alt="github backend"
+                  />{" "}
+                  Backend
+                </a>
+              </Button>
+            )}
           </CardContent>
         </Card>
       </motion.div>
@@ -130,19 +136,33 @@ const ProjectDetails: React.FC<Props> = () => {
       {/* Tech Stack */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {/* Frontend */}
-        <ProjectsSkillsCard tech={project.tech.frontend} techStak="Frontend" />
+        {project?.tech?.frontend && (
+          <ProjectsSkillsCard
+            tech={project.tech.frontend}
+            techStak="Frontend"
+          />
+        )}
 
         {/* Backend */}
-        <ProjectsSkillsCard tech={project.tech.backend} techStak="Backend" />
+        {project?.tech?.backend && (
+          <ProjectsSkillsCard tech={project.tech.backend} techStak="Backend" />
+        )}
 
         {/* Database */}
-        <ProjectsSkillsCard tech={project.tech.DataBase} techStak="Database" />
+        {project?.tech?.DataBase && (
+          <ProjectsSkillsCard
+            tech={project.tech.DataBase}
+            techStak="Database"
+          />
+        )}
 
         {/* Auth */}
-        <ProjectsSkillsCard
-          tech={project.tech.Auth}
-          techStak="Authentication"
-        />
+        {project?.tech?.Auth && (
+          <ProjectsSkillsCard
+            tech={project.tech.Auth}
+            techStak="Authentication"
+          />
+        )}
       </div>
 
       {/* Back Button */}

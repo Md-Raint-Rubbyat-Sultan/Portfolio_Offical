@@ -1,23 +1,28 @@
-import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
 import {
   Card,
+  CardContent,
+  CardDescription,
   CardHeader,
   CardTitle,
-  CardDescription,
-  CardContent,
 } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Link } from "react-router";
+import { motion } from "framer-motion";
+import { ArrowUpRight } from "lucide-react";
+import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router";
 
-export default function Projects() {
+const Projects: React.FC = () => {
   const [projects, setProjects] = useState<any[]>([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     fetch("/projects.json")
       .then((res) => res.json())
       .then((data) => setProjects(data));
   }, []);
+
+  const handleProject = (id: string) => {
+    navigate(`/projects/${id}`);
+  };
 
   return (
     <motion.section
@@ -38,7 +43,8 @@ export default function Projects() {
           <motion.div
             key={idx}
             whileHover={{ scale: 1.03 }}
-            className="bg-card/50 backdrop-blur-lg border border-border rounded-xl shadow-lg"
+            className="bg-card/50 backdrop-blur-lg border border-border rounded-xl shadow-lg group"
+            onClick={() => handleProject(project._id)}
           >
             <Card className="h-full flex flex-col">
               <CardHeader>
@@ -47,17 +53,17 @@ export default function Projects() {
                 </CardTitle>
                 <CardDescription>{project.description}</CardDescription>
               </CardHeader>
-              <CardContent className="flex flex-col items-center justify-between flex-grow space-y-4">
+              <CardContent className="relative overflow-hidden">
                 <img
                   src={project.image[0]}
                   alt={project.title}
                   className="w-full h-40 object-cover rounded-lg"
                 />
-                <Button className="w-full" asChild>
-                  <Link to={`/projects/${project._id}`} className="w-full">
-                    View Details
-                  </Link>
-                </Button>
+                <div className="absolute inset-0 bg-muted/20 hidden group-hover:flex justify-center items-center transition-all duration-300">
+                  <p className="flex items-center gap-2 text-primary font-bold">
+                    <span>Visit</span> <ArrowUpRight />
+                  </p>
+                </div>
               </CardContent>
             </Card>
           </motion.div>
@@ -68,4 +74,6 @@ export default function Projects() {
       <div className="mt-12 w-32 h-1 mx-auto bg-gradient-to-r from-primary to-secondary rounded-full"></div>
     </motion.section>
   );
-}
+};
+
+export default Projects;
