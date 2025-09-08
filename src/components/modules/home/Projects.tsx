@@ -46,12 +46,12 @@ const Projects: React.FC = () => {
             className="bg-card/50 backdrop-blur-lg border border-border rounded-xl shadow-lg group"
             onClick={() => handleProject(project._id)}
           >
-            <Card className="h-full flex flex-col">
+            <Card className="h-full flex flex-col justify-between">
               <CardHeader>
                 <CardTitle className="text-foreground">
                   {project.title}
                 </CardTitle>
-                <CardDescription>{project.description}</CardDescription>
+                <CardDescription>{project?.description}</CardDescription>
               </CardHeader>
               <CardContent className="relative overflow-hidden">
                 <img

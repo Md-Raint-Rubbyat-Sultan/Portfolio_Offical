@@ -27,7 +27,7 @@ const ProjectDetails: React.FC<Props> = () => {
     >
       {/* Title */}
       <h1 className="text-3xl font-bold text-foreground mb-4">
-        {project.title}
+        {project?.title}
       </h1>
 
       {/* Carousel */}
@@ -35,7 +35,7 @@ const ProjectDetails: React.FC<Props> = () => {
         <CardContent>
           <Carousel className="w-full max-w-3xl mx-auto">
             <CarouselContent>
-              {project.image.map((img: string, idx: number) => (
+              {project?.image.map((img: string, idx: number) => (
                 <CarouselItem key={idx} className="flex justify-center">
                   <img
                     src={img}
@@ -77,7 +77,7 @@ const ProjectDetails: React.FC<Props> = () => {
                 className="flex items-center gap-2"
               >
                 <a
-                  href={project.liveDemo}
+                  href={project?.liveDemo}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -97,7 +97,7 @@ const ProjectDetails: React.FC<Props> = () => {
                 className="flex items-center gap-2"
               >
                 <a
-                  href={project.github.client}
+                  href={project?.github?.client}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -117,7 +117,7 @@ const ProjectDetails: React.FC<Props> = () => {
                 className="flex items-center gap-2"
               >
                 <a
-                  href={project.github.backend}
+                  href={project?.github?.backend}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
