@@ -1,13 +1,13 @@
 import { AnimatePresence, motion } from "motion/react";
 import React from "react";
+import Footer from "./components/layouts/footerSection";
 import { ModeToggle } from "./components/layouts/mode-toggle";
 import About from "./components/modules/home/About";
-import HeroSection from "./components/modules/home/HeroSection";
-import SkillsSection from "./components/modules/home/SkillsSection";
 import ContactMe from "./components/modules/home/ContactMe";
-import Projects from "./components/modules/home/Projects";
-import Footer from "./components/layouts/footerSection";
 import EducationSection from "./components/modules/home/EducationSection";
+import HeroSection from "./components/modules/home/HeroSection";
+import Projects from "./components/modules/home/Projects";
+import SkillsSection from "./components/modules/home/SkillsSection";
 
 type Props = {};
 

@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import React from "react";
-import { Link, useLoaderData } from "react-router";
+import { Link, ScrollRestoration, useLoaderData } from "react-router";
 
 const BlogDetails: React.FC = () => {
   const { blogs: blog } = useLoaderData();
@@ -13,6 +13,7 @@ const BlogDetails: React.FC = () => {
       transition={{ duration: 0.5 }}
       className="max-w-3xl mx-auto p-6"
     >
+      <ScrollRestoration />
       {/* Blog Title */}
       <div className="flex items-center gap-4 mb-6">
         <img

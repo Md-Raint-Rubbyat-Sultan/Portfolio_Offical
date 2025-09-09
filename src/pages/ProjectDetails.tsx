@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, useLoaderData } from "react-router";
+import { Link, ScrollRestoration, useLoaderData } from "react-router";
 import { motion } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -25,6 +25,7 @@ const ProjectDetails: React.FC<Props> = () => {
       transition={{ duration: 0.5 }}
       className="max-w-5xl mx-auto p-6"
     >
+      <ScrollRestoration />
       {/* Title */}
       <h1 className="text-3xl font-bold text-foreground mb-4">
         {project?.title}
