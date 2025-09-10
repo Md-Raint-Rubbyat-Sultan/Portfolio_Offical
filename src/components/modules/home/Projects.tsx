@@ -30,7 +30,7 @@ const Projects: React.FC = () => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.3 }}
       transition={{ duration: 0.6 }}
-      className="relative max-w-6xl mx-auto px-6 py-12"
+      className="relative mx-auto py-12"
     >
       {/* Title */}
       <h1 className="text-4xl md:text-5xl font-bold underline underline-offset-8 decoration-primary mb-12 text-center">

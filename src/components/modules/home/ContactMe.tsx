@@ -40,7 +40,7 @@ const ContactMe: React.FC<Props> = () => {
   };
 
   return (
-    <div className="relative max-w-3xl mx-auto px-6 py-12 rounded-xl bg-card/50 backdrop-blur-lg shadow-lg border border-border">
+    <div className="relative mx-auto px-6 py-12 rounded-xl bg-card/50 backdrop-blur-lg shadow-lg border border-border">
       {/* Gradient blobs */}
       <div className="absolute -top-10 -right-10 w-40 h-40 bg-primary/20 rounded-full blur-3xl animate-pulse"></div>
       <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-secondary/20 rounded-full blur-3xl animate-pulse"></div>

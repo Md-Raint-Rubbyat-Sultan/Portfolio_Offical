@@ -15,7 +15,7 @@ const EducationSection = () => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.3 }}
       transition={{ duration: 0.6 }}
-      className="relative max-w-6xl mx-auto px-6 py-16"
+      className="relative mx-auto py-16"
     >
       {/* Decorative Background Glow */}
       <div className="absolute inset-0 -z-10 bg-gradient-to-tr from-primary/10 via-secondary/10 to-transparent rounded-3xl blur-3xl opacity-50"></div>

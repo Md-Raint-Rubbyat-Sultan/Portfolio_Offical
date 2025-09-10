@@ -74,7 +74,7 @@ const HeroSection: React.FC<Props> = () => {
               <Button asChild size={"lg"} className="w-full sm:w-auto">
                 <a
                   href={
-                    "https://drive.google.com/file/d/1iM5Fsn3HA0o_P9GFNvRFpEsLaKdQcQJU/view?usp=sharing"
+                    "https://drive.google.com/file/d/1pMPaezl-HRnTk9HoXJQvNO3_cwNopGT-/view"
                   }
                   target="_blank"
                 >
